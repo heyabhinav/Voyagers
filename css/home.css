@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"); /*font-family: 'Bebas Neue', cursive;*/
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap"); /*font-family: 'Saira Condensed', sans-serif;*/
+
+:root {
+  --color-white: rgb(223, 223, 223);
+  --color-white-trans: rgba(255, 255, 255, 0.712);
+  --color-orange: rgb(255, 108, 71);
+  --color-black: rgb(27, 27, 27);
+  --color-orange-light: rgb(255, 183, 125);
+  --color-gray: rgb(73, 73, 73);
+  --color-gray-dark: #333;
+  --color-gray-light: rgb(122, 122, 122);
+  --gradient-v1: rgba(0, 0, 0, 0.651);
+  --gradient-v2: rgba(0, 0, 0, 0.329);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../images/homeHero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* dark theme */
+.dark-theme {
+  --color-black: rgb(223, 223, 223);
+  --color-white: rgb(27, 27, 27);
+  --gradient-v1: rgba(0, 0, 0, 0.952);
+  --gradient-v2: rgba(0, 0, 0, 0);
+}
+#dark-mode {
+  /* padding-top: 0.8rem; */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+/* narbar */
+.header {
+  height: auto;
+  /* background-color: #0f0f0d; */
+}
+.navbar {
+  flex-direction: row;
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  justify-content: space-between;
+  transition: 0.4s all;
+  height: 6rem;
+}
+.nav-items {
+  display: flex;
+  margin-left: 3rem;
+  align-items: center;
+}
+.nav-item {
+  list-style: none;
+  padding: 1rem;
+  align-self: center;
+  font-size: 2rem;
+  font-family: "Nunito", sans-serif;
+  transition: 0.3s opacity;
+}
+.item-right {
+  margin-right: 3rem;
+}
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-item:hover {
+  opacity: 0.8;
+}
+.nav-brand {
+  text-decoration: none;
+  /* color: var(--color-orange-light); */
+  color: var(--color-white);
+  font-size: 4rem;
+  align-self: center;
+  font-family: "Cookie", cursive;
+}
+
+/* section-1 */
+.section-1 {
+  padding: 32rem 5rem 5rem;
+}
+.s1 {
+  background-color: var(--color-white-trans);
+  /* margin: 10rem 5rem 5rem; */
+  border-radius: 0.5rem;
+  padding: 5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homeHeading {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  /* border-bottom: 0.5rem solid var(--color-black);  */
+  /* font-family: "Nunito", sans-serif; */
+  /* font-family: 'Bebas Neue', cursive;s */
+  font-family: "Saira Condensed", sans-serif;
+}
+.feature-text {
+  align-self: center;
+  font-size: 2rem;
+  font-family: "Red Hat Display", sans-serif;
+  letter-spacing: 1px;
+  padding: 1rem 5rem;
+  /* border: 2px solid var(--color-black); */
+}
+/* section 2 */
+.section-2 {
+  padding: 1rem 5rem 5rem;
+  background-color: var(--color-white-trans);
+  margin: 0rem 5rem 5rem;
+  border-radius: 0.5rem;
+  padding: 5rem 5rem;
+  justify-content: center;
+}
+.s2 {
+  display: flex;
+}
+/* popular places */
+.recents {
+  margin: 0 auto;
+  width: 80vw;
+}
+
+.recents span {
+  display: block;
+  text-align: center;
+  /* font-weight: bold; */
+}
+.recent-visits {
+  margin: 0 auto;
+  margin-left: 0px;
+  padding: 20px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recent-visits span{
+  display: block;
+  text-align: center;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 4rem;
+}
+
+.recent-visits-img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+}
+.recent-visits-img:hover{
+  box-shadow: 0.1rem 0rem 1.5rem rgba(71, 71, 71, 0.651);
+  /* width: 16vw;
+  height: 16vw; */
+}
+/* section-3 */
+.section-3 {
+  padding: 10rem 5rem 5rem;
+  background-color: var(--color-white-trans);
+  margin: 0rem 5rem 5rem;
+  border-radius: 0.5rem;
+  padding: 5rem 5rem;
+  justify-content: center;
+}
+.s3 {
+  display: flex;
+}
+.section-3 a, .recent-visits a{
+  color: black;
+  text-decoration: none;
+
+}
+.scene{
+  width: 30vw;
+  height: 100%;
+  margin-bottom: -5px;
+}
+.blog-head{
+  font-size: 2vw;
+}
+
+.recent-container{
+  margin: 0 auto;
+  width: 80vw;
+}
+.recent-blogs{
+  width: 80vw;
+  height: 20vw;
+  display: flex;
+  margin-bottom: 2vw;
+  box-shadow: 0 0 2px rgb(0, 0, 0);
+}
+.r-blog-head-text h1{
+  font-size: 4rem;
+}
+.r-blog-head-text{
+  padding: 1em;
+  align-items: center;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+}
+.r-blog-head-text p{
+  padding: 2rem;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.5rem;
+}
+
+/* footer  */
+.footer {
+  height: 40rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-gray-dark);
+  font-family: "Nunito", sans-serif;
+}
+.footer-content-left {
+  display: flex;
+  border-right: 1px solid var(--color-gray-light);
+  justify-content: center;
+  width: 50%;
+}
+.footer-content-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.footer-heading {
+  font-size: 3rem;
+  list-style: none;
+  color: var(--color-gray-light);
+  height: 5rem;
+}
+.footer-right-text {
+  width: 60%;
+}
+
+.footer-item {
+  list-style: none;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 2rem;
+}
+.footer-right-text {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+.footer-right-text::before {
+  content: "Story Of This Project";
+  display: block;
+  color: var(--color-gray-light);
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
