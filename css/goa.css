@@ -3,12 +3,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Saira+Condensed&display=swap');
 :root {
   --color-white: rgb(223, 223, 223);
   --color-white-dark: rgba(91, 91, 91, 0.61);
+  --color-white-trans: rgba(255, 255, 255, 0.815);
   --color-orange: rgb(255, 108, 71);
   --color-black: rgb(27, 27, 27);
+  --color-black-trans: rgba(27, 27, 27, 0.466);
   --color-orange-light: rgb(255, 183, 125);
   --color-gray: rgb(73, 73, 73);
   --color-gray-light: rgb(122, 122, 122);
@@ -16,13 +17,17 @@
   --gradient-v2: rgba(0, 0, 0, 0.329);
 }
 html {
-  font-size: 1em;
+  font-size: 62.5%;
 }
 body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   /* background-color: rgb(148, 145, 145); */
+  background-image: url("../images/7.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 /* dark theme */
 .dark-theme {
@@ -42,76 +47,122 @@ body {
   position: fixed;
   justify-content: space-between;
   transition: 0.4s all;
-  height: 4rem;
+  height: 6rem;
 }
 .nav-items {
   display: flex;
-  margin-left: 3rem;
+  /* margin-left: 3rem; */
   align-items: center;
 }
 .nav-item {
   list-style: none;
-  padding: 1rem;
+  /* padding: .8rem; */
   align-self: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: "Nunito", sans-serif;
   transition: 0.3s opacity;
 }
 .item-right {
-  margin-right: 3rem;
+  margin-right: 1rem;
 }
 .nav-link {
   text-decoration: none;
+  background-color: transparent;
   color: #fff;
+  text-align: center;
+  padding: 0 1em;
+  transition: all 300ms ease-out;
 }
-.nav-item:hover {
-  opacity: 0.8;
+.nav-link:hover {
+  /* opacity: 0.8; */
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 1.5em;
+
 }
 .nav-brand {
   text-decoration: none;
   /* color: var(--color-orange-light); */
   color: var(--color-white);
-  font-size: 2.7rem;
+  font-size: 4rem;
   align-self: center;
   font-family: "Cookie", cursive;
 }
+.content-box:hover + #content, #content:hover{
+  display: block;
+  transition: display 300ms ease;
+}
+#content{
+  display: none;
+  position: absolute;
+  width: 400px;
+  /* height: 400px; */
+  right: 0%;
+  top:100%;
+  padding: 1em;
+  background-color: rgb(255, 250, 250);
+  border-radius: 5px;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+#content ul{
+  /* list-style: none; */
+  color: rgb(0, 0, 0);
+  margin-left: -1.5em; 
+}
+#content ul li{
+  padding: 10px 0;
+}
+
+#content a{
+  text-decoration: none;
+  font-size: 1.3em;
+  font-family: 'Century Gothic';
+  color:rgb(0, 0, 0);
+  /* line-height: 1.6; */
+}
+
+#content a:hover{
+  text-decoration: underline;
+}
+
 main{
+  display: relative;
+  /* background-color: var(--color-black-trans); */
+  padding-top: 4em;
   box-sizing: border-box;
+  font-size: 1.6em;
+}
+
+#blog-content{ 
+  padding: 20px;
+  font-family: 'Century Gothic';
   margin: 0 auto;
   width: 80vw;
 }
-
-#blog-content{
-  display: absolute;
-  background-color: whitesmoke;
-  top: 100%; left: 0; right: 0;
-  padding: 20px;
-  padding-top: 88px;
-  font-family: 'PT Sans', sans-serif;
-  box-shadow: 0 0 2px rgb(90, 90, 90);
-}
-.scene-image{
+/* .scene-image{
+  width: 1180px;
+  height: 600px;
   margin: 0 auto;
   padding: 200px 0;
-  background-image: url('../images/7.jpg');
+  background-image: url('images/7.jpg');
   background-size: cover;
   box-sizing: border-box;
-}
-
-img{
-  padding: 0rem 1rem;
-}
-
+} */
+/* h2{
+  padding-top: 1.6em;
+} */
 h1{
   background-color: rgba(0, 0, 0, 0.705);
   color: rgb(187, 255, 0);
-  font-size: 3.5em;
+  font-size: 3em;
   text-align: center;
+  border-radius: 15px;
 }
-.blog{
-  padding: 10px;
-}
-h2, .img-text{
+
+h2{
+  font-size: 2em;
   text-align: center;
 }
 
@@ -142,6 +193,13 @@ h2, .img-text{
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.s1 {
+  background-color: var(--color-white-trans);
+  border-radius: 0.5rem;
+  padding: 1em;
+  margin-bottom: 1em;
 }
 
 .footer {
