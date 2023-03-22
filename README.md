@@ -1,1 +1,1 @@
-Visit the website <a href="https://heyabhinav.github.io/Voyagers/" target="_blank">Google</a>
+Visit the website <a href="https://heyabhinav.github.io/Voyagers/" target="blank">LINK</a>
