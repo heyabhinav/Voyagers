@@ -1,1 +1,1 @@
-Visit the website "[LINK]""(https://heyabhinav.github.io/Voyagers/)"
+Visit the website <a href="https://heyabhinav.github.io/Voyagers/" target="_blank">Google</a>
