@@ -7,4 +7,24 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-  }
+}
+
+/* .s1 table, th, td{
+    border: 1px solid;
+} */
+.s1 table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.s1 table th{
+    text-align: left;
+    width: 20%;
+}
+.s1 table .first-col{
+    width: 25%;
+}
+.s1 table td{
+    padding: 0 0 2em 0;
+    text-align: left;
+    vertical-align: top;
+}
