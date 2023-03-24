@@ -5,7 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Goa | Blog </title>
+        
         <link rel="stylesheet" href="../css/goa.css">
+        <link rel='stylesheet' href="../css/delhi_blog_style.css">
+        <script src="https://kit.fontawesome.com/6bb2190854.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -246,6 +249,41 @@
                         <img src="../images/temple.jpg" alt="place-1-image" class='track-img'>
                         <p class='img-text' style="text-align: center;"><u> Tambdi Surla Mahadev Temple in Goa </u></p>
                     </section>
+                    <section class="s2">    
+                        <!-- <h2 id="">Likes & Comments</h2> -->
+                        <!-- <span>Did you found this blog helpful?</span> -->
+                        <div class="like-share-comment">
+                            <div onclick='changeColor()'><i class="fas fa-heart" id="likeButton"></i> Like</div>
+                            <div onclick="displayCommentBox()"><i class="far fa-comment-alt"></i> Comment</div>
+                            <div><i class="fas fa-share"></i> Share</div>
+                        </div>
+                        
+                        <div class="container">
+                            <textarea id='comment' placeholder="Add your comment here..."></textarea>
+    
+                            <button onclick="postComment()" id='button'>Post</button>
+                        </div>
+                    </section>
+    
+                    <section class="comment-sec">
+                        <!-- <h2><i class="far fa-comment-alt"></i> Comments</h2> -->
+                        <!-- <div class="container">
+                            <textarea id='comment' placeholder="Add your comment here..."></textarea>
+    
+                            <button onclick="postComment()" id='button'>Post</button>
+                        </div> -->
+                        <!-- <br><br> -->
+                        <div id="posted-comments">
+                            <!-- <hr color="black"> -->
+                            <!-- <div class="actual-comment">
+                                <div class="name-img-sec">
+                                    <img src="../images/pp.jpg" class="image">
+                                    <div class="image"></div>
+                                    <div class="name">Anonymous he Anonymous</div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </section>
                 </div>
             </div>
         </main>
@@ -283,6 +321,45 @@
                     document.getElementById("content").style.display = 'block';
                 }else{
                     document.getElementById("content").style.display = 'none';
+                }
+            }
+            function postComment(){
+                var textToPost = document.querySelector('textarea'); 
+                var postSection = document.getElementById("posted-comments");
+    
+                if (textToPost.value.length > 0){
+                    document.querySelector(".comment-sec").style.display = 'block';
+                    postSection.innerHTML += `<div class="actual-comment">  \
+                                                    <div class="name-img-sec">  \
+                                                        <!--<img src="../images/pp.jpg" class="image">-->\
+                                                        <div class="image"></div>\
+                                                        <div class="name">Ananth Sharma\</div>
+                                                        <p class="comment-text"> ${textToPost.value} </p>\
+                                                    </div>\
+                                              </div>`
+                }
+                textToPost.value = '';
+            };        
+    
+            var clickCount = 1;
+            function changeColor(){
+                if (clickCount == 1){
+                    document.getElementById("likeButton").style.color = 'red';
+                    clickCount = 0;
+                }else{
+                    document.getElementById("likeButton").style.color = 'white';
+                    clickCount = 1;
+                }
+            }
+    
+            var c = 1;
+            function displayCommentBox(){
+                if (c == 1){
+                    document.querySelector('.container').style.display = 'flex';
+                    c = 0;
+                }else{
+                    document.querySelector('.container').style.display = 'none';
+                    c = 1;
                 }
             }
         </script>
