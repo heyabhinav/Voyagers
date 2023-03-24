@@ -280,7 +280,7 @@ textarea:active, textarea:focus{
   margin: 0 auto;
   overflow-wrap: break-word;
   width: 88%;
-  text-align: center;
+  /* text-align: center; */
   font-size: 0.8em;
 }
 .name, .image{
